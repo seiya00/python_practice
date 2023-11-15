@@ -32,7 +32,6 @@ while True:
                 response = 'Processing ' + data_str
                 random = fake.name()
                 connection.sendall(response.encode())
-                connection.sendall(random.encode())
             else:
                 print('no data from', client_address)
                 break

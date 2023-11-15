@@ -13,10 +13,10 @@ except socket.error as err:
     sys.exit(1)
 
 try:
-    message = input('Type anything\n').encode()
-    sock.sendall(message)
+    message = input('Type anything\n')
+    sock.sendall(bytes(message, 'utf-8'))
 
-    sock.settimeout(5)
+    sock.settimeout(2)
 
     try:
         while True:
